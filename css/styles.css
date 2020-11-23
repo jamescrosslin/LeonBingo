@@ -8,6 +8,7 @@ body {
   width: 100%;
   font-size: 3vh;
   font-weight: 400;
+  background-color: rgba(0, 255, 234, 0.322);
 }
 header,
 footer {
@@ -19,7 +20,7 @@ footer {
 header {
   font-size: 5vh;
 }
-#main {
+main {
   display: flex;
   flex: 1;
   justify-content: center;
@@ -27,13 +28,18 @@ header {
   width: 100%;
 }
 
-#main button {
-  width: 50%;
-  height: 10%;
+main button {
+  width: 15vw;
+  height: 9vw;
+  /* style */
+  border-radius: 2vw;
+  border: 5px solid rgb(211, 226, 241);
+  background-color: rgb(11, 61, 92);
+  color: rgb(211, 226, 241);
+  font-size: inherit;
 }
 
-#removeBtnWrap,
-#coverAllBtnWrap {
+.gutter {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,14 +60,26 @@ header {
   align-items: center;
   width: auto;
   height: auto;
+  text-align: center;
+  /*style*/
+  background-color: lightcyan;
+  border: 0.5em double black;
+  font-size: 2vh;
+  font-weight: 800;
+  font-family: serif;
+  text-shadow: 0.02em 0.01em black;
+}
+
+#board section:hover {
+  transform: scale(1.1);
 }
 
 section {
   outline: auto;
 }
 
-@media screen and (max-width: 750px) {
-  #main {
+@media screen and (max-width: 830px) {
+  main {
     flex-direction: column;
     background-color: purple;
     align-items: center;
@@ -75,10 +93,30 @@ section {
     width: 80vw;
     height: 80vw;
   }
+
+  #board section {
+    font-size: 2vw;
+  }
+  main button {
+    width: 30vw;
+    height: 12vw;
+    font-size: 4vw;
+  }
 }
 @media screen and (max-width: 500px) {
   #board {
     width: 97vw;
     height: 97vw;
+  }
+  #board section {
+    font-size: 3vw;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  #board {
+    background-color: rgb(157, 157, 214);
+    max-height: 97vh;
+    max-width: 97vh;
   }
 }
