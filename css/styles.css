@@ -55,6 +55,7 @@ main button {
   max-width: 90vh;
 }
 #board section {
+  /*squares*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,7 +64,7 @@ main button {
   text-align: center;
   /*style*/
   background-color: lightcyan;
-  border: 0.5em double black;
+  border: 0.5em outset whitesmoke;
   font-size: 2vh;
   font-weight: 800;
   font-family: serif;
@@ -74,8 +75,30 @@ main button {
   transform: scale(1.1);
 }
 
-section {
-  outline: auto;
+#board .stamp {
+  background-image: url("../img/resizedLogo.png");
+  background-size: cover;
+  background-color: coral;
+  border-style: inset;
+  opacity: 0.7;
+
+  animation-name: stamp;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  backface-visibility: unset;
+  perspective: none;
+  transform-style: unset;
+}
+
+@keyframes stamp {
+  0% {
+    opacity: 1;
+    transform: scale(4);
+  }
+  100% {
+    opacity: 0.7;
+  }
 }
 
 @media screen and (max-width: 830px) {
