@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+html {
+  font-size: 62.5%;
+}
 @font-face {
   font-family: "unicorn";
   src: url(/fonts/GoodUnicornRegular-Rxev.ttf) format("truetype");
@@ -13,6 +16,22 @@ body {
   font-size: 3vh;
   font-weight: 400;
   background-color: rgba(0, 255, 234, 0.322);
+  background-image: linear-gradient(
+    32deg,
+    rgba(178, 208, 233, 0.8),
+    rgb(115, 182, 211),
+    rgb(53, 145, 165),
+    rgb(8, 126, 110),
+    rgb(55, 92, 125),
+    rgb(30, 89, 133),
+    rgba(48, 76, 99, 0.9),
+    rgba(70, 103, 129),
+    rgb(51, 129, 162),
+    rgb(49, 127, 145),
+    rgb(8, 126, 110),
+    rgb(47, 89, 126),
+    rgb(32, 58, 78)
+  );
 }
 header,
 footer {
@@ -37,32 +56,33 @@ header {
 #title-1 {
   grid-area: 1 / 2 / 3 / 5;
   margin-top: 3vw;
-}
-
-header section {
-  /* outline: inherit; */
-  /* font-size: 100px;
-  margin: -100px 0 0; */
+  z-index: 1;
 }
 
 #logo {
   grid-area: 2 / 3 / 5 / 4;
   /* outline: inherit; */
-  background-image: url(/img/resizedLogo.png);
+  /* background-image: url(/img/resizedLogo.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
   height: 100%;
   width: 100%;
   border: 9vw solid #e7a577fa;
   border-radius: 50%;
   overflow: hidden;
+  z-index: 0;
+}
+#logo img {
+  height: 120%;
+  filter: drop-shadow(5px 5px 5px #222222);
 }
 
 #title-2 {
   grid-area: 4 / 2 / 6 / 5;
   font-size: 15vw;
   margin-top: 3vw;
+  z-index: 1;
 }
 
 footer {
@@ -164,7 +184,6 @@ main button:hover {
 @media screen and (max-width: 830px) {
   main {
     flex-direction: column;
-    background-color: purple;
     align-items: center;
   }
   #removeBtnWrap,
@@ -195,17 +214,13 @@ main button:hover {
     font-size: 3vw;
   }
   header {
-    grid-template-columns: 10vw 50vw 10vw;
+    grid-template-columns: 1fr 20vw 50vw 20vw 1fr;
     grid-template-rows: 5vw 14vw 22vw 14vw 5vw;
-  }
-  #title-1 {
-    grid-area: 1 / 2 / 3 / 5;
   }
 }
 
 @media screen and (max-height: 600px) {
   #board {
-    background-color: rgb(157, 157, 214);
     max-height: 97vh;
     max-width: 97vh;
   }

@@ -6,22 +6,17 @@
     <link rel="stylesheet" type="text/css" href="/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="/css/styles.css" />
     <title>Learn With Leon Bingo</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/jquery.arctext.js"></script>
-    <script>
-      $().ready(function () {
-        $("#title-1").arctext({ radius: 700 })
-      })
-    </script>
   </head>
   <body>
     <header>
       <section id="title-1"><h1>Learn With Leon</h1></section>
-      <div id="logo"></div>
+      <div id="logo"><img src="img/resizedLogo.png" /></div>
       <section id="title-2"><h1>BINGO!</h1></section>
     </header>
     <main>
-      <section class="gutter"><button>Shuffle Board</button></section>
+      <section class="gutter">
+        <button id="shuffleBtn">Shuffle Board</button>
+      </section>
       <section id="board">
         <section></section>
         <section></section>
@@ -50,7 +45,7 @@
         <section></section>
       </section>
       <section class="gutter">
-        <button>Cover All Mode: Off</button>
+        <button id="coverAllBtn">Cover All Mode: Off</button>
       </section>
     </main>
     <footer>
